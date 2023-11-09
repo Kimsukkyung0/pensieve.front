@@ -8,30 +8,12 @@
 <body>
         <input class="ctnt" type="text" placeholder="Enter the message">
         <button class="send">send</button>
-        <!-- 제이쿼리 import -->
+        
         
         <div class="result"></div>
     
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-    console.log(location.origin);
-    $(document).ready(function(){
-        $('.send').click(function(){  
-            let sendData = "ctnt="+$('input[ctnt]').val();  
-            $.ajax({
-                type:'post',  
-                url:'http://localhost:8085', 
-                data:sendData, 
-                dataType:'json',
-                success : function(data){
-                    $('.result').html(data); 
-                },
-                error : function(data){
-                    $('.result').html("failed");
-                }
-            });
-        });
-    });
-    </script>
+    <!-- 제이쿼리 import -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="setting/body.js"></script>
 </html>
