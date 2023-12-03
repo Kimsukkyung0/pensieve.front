@@ -12,9 +12,7 @@ window.onload = function(){
 			
 			$('.send').click(function(){ 
 				if(jsonData!=null){
-					// Http.open("post",Url);
-					// Http.send();
-					// Http.onreadystatechange=(e)=>{
+
 					var sendJsonData = {
 						"userId" : 2,
 						"ctnt" : jsonData.value
