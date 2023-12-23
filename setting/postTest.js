@@ -5,39 +5,52 @@ window.onload = function(){
 	console.log(location.origin);
 	var jsonData = document.getElementById("ctnt");
 	
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'http://localhost:8085/post');
+	xhr.onload = function() {
+		if (xhr.status === 200) {
+			alert('요청성공 , 리스트 정보' + xhr.responseText);
+		}
+		else {
+			alert('요청실패 , 상태 : ' + xhr.status);
+		}
+	};
+	xhr.send();
 
-		$(document).ready(function(){
-			// const Http = new XMLHttpRequest();
-			const Url = 'http://localhost:8085/post';
+
+
+		// $(document).ready(function(){
+		// 	// const Http = new XMLHttpRequest();
+		// 	const Url = 'http://localhost:8085/post';
 			
-			$('.send').click(function(){ 
-				if(jsonData!=null){
+		// 	$('.send').click(function(){ 
+		// 		if(jsonData!=null){
 
-					var sendJsonData = {
-						"userId" : 2,
-						"ctnt" : jsonData.value
-					}
-					console.log(sendJsonData);
-					$.ajax({
-						type:"GET",  
-						url : URL, 
-						async:true,
-						data:sendJsonData, 
-						contentType: "application/json; charset=utf-8",
-						dataType:"JSON",
-						success : function(data){
-							$('.result').html(JSON.stringify(data)); 
+		// 			var sendJsonData = {
+		// 				"userId" : 2,
+		// 				"ctnt" : jsonData.value
+		// 			}
+		// 			console.log(sendJsonData);
+		// 			$.ajax({
+		// 				type:"GET",  
+		// 				url : URL, 
+		// 				async:true,
+		// 				data:sendJsonData, 
+		// 				contentType: "application/json; charset=utf-8",
+		// 				dataType:"JSON",
+		// 				success : function(data){
+		// 					$('.result').html(JSON.stringify(data)); 
 							
-						},
-						error : function(data){
-							$('.result').html("failed");
-						}
+		// 				},
+		// 				error : function(data){
+		// 					$('.result').html("failed");
+		// 				}
 					
-					});
+		// 			});
 				
-				}else{console.log("유효한 값이 아닙니다");}
-			});
+		// 		}else{console.log("유효한 값이 아닙니다");}
+		// 	});
 			
-		});
+		// });
 
 }
