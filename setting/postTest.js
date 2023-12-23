@@ -3,19 +3,32 @@ window.onload = function(){
 
 	console.log("[window.onload] : [start]" );
 	console.log(location.origin);
-	var jsonData = document.getElementById("ctnt");
+	
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'http://localhost:8085/post');
-	xhr.onload = function() {
+	xhr.setRequestHeader("content-type", "application/json"); 
+	//헤더 값 중 content-type 정의
+
+	const fnPost = function() {
+		var targetData = document.getElementById("ctnt");
+		console.log("targetData : " + targetData);
+		console.log("targetData.value : " + targetData.value);
+		var postTestData = {
+			"userId" : 2,
+			"ctnt" : targetData.value
+		}
 		if (xhr.status === 200) {
 			alert('요청성공 , 리스트 정보' + xhr.responseText);
 		}
 		else {
 			alert('요청실패 , 상태 : ' + xhr.status);
 		}
+
+		xhr.send(JSON.stringify(postTestData));
 	};
-	xhr.send();
+	
+	
 
 
 

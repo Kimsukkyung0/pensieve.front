@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pensieve Test</title>
+ 
 </head>
 <body>
     <div class="info">
         <input id="ctnt" name="ctnt" type="text" placeholder="Enter the message">
         
-        <button class="send">send</button>      
+        <button class="send" onclick="localfnPost()">send</button>   
+        <button class="get">get</button>      
     </div>
         
         <div class="result"></div>
     
 </body>
-    <!-- 제이쿼리 import -->
-    <script type="text/javascript" src="js/jquery-1.11.0.js></script>
-    <!-- <script type="text/javascript" src="setting/postTest.js"></script> -->
-    <script type="text/javascript" src="setting/getTest.js"></script>
+<script type="text/javascript" src="setting/postTest.js"></script>
+<script type="text/javascript" src="setting/getTest.js"></script>    
+<script>
+    var localfnPost = fnPost;
+    console.log("localfnPost : " +localfnPost)
+</script>
 </html>
