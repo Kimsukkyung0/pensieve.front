@@ -1,18 +1,17 @@
-window.onload = function(){
-	
-
-	console.log("[window.onload] : [start]" );
-	console.log(location.origin);
+	// console.log("[window.onload] : [start]" );
 	
 	
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'http://localhost:8085/post');
-	xhr.setRequestHeader("content-type", "application/json"); 
+	
+	
 	//헤더 값 중 content-type 정의
 
 	const fnPost = function() {
+		console.log("location.origin : " + location.origin);
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', 'http://localhost:8085/post');
+		xhr.setRequestHeader("content-type", "application/json"); 
+		
 		var targetData = document.getElementById("ctnt");
-		console.log("targetData : " + targetData);
 		console.log("targetData.value : " + targetData.value);
 		var postTestData = {
 			"userId" : 2,
@@ -65,5 +64,3 @@ window.onload = function(){
 		// 	});
 			
 		// });
-
-}

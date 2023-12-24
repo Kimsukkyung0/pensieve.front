@@ -11,7 +11,7 @@
         <input id="ctnt" name="ctnt" type="text" placeholder="Enter the message">
         
         <button class="send" onclick="localfnPost()">send</button>   
-        <button class="get">get</button>      
+        <button class="get" onclick="localfnGet()">get</button>      
     </div>
         
         <div class="result"></div>
@@ -21,6 +21,8 @@
 <script type="text/javascript" src="setting/getTest.js"></script>    
 <script>
     var localfnPost = fnPost;
+    var localfnGet = fnGet;
     console.log("localfnPost : " +localfnPost)
+    console.log("localfnGet : " +localfnGet)
 </script>
 </html>
