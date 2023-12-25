@@ -1,10 +1,26 @@
 .wrap{
-    width: 100%;
-    height:100%;
+    width: 100vw;
+    height:100vh;
+    background : url(https://img.freepik.com/free-photo/background-of-gradient-lights_23-2149304985.jpg?w=1380&t=st=1703488021~exp=1703488621~hmac=964541527877b08f5b78e79ea8ed80c5ed0fe1588ed433e6b3ba24526369be43) no-repeat;
+    /* background: url(..\pen_back.jpg); */
+    background-size: cover;
+    /* border: 1px solid red; */
 }
 .wrap .index_wrap{
-    width:50%;
+    width:30%;
+    min-width: 40rem;
     height: 100%;
     margin: 0 auto;
-    background-color: black;
+    
+    
+    /* background-repeat: no-repeat; */
 }
+
+.wrap .index_wrap .login_container{
+    height: 50%;
+    min-height: 25rem;
+    background-color: darkgrey;
+    opacity: .4;
+    z-index: -999;    
+}
+
