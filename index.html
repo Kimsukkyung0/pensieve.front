@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pensieve Test</title>
- 
+    <link href="setting/css/styles.css" rel="stylesheet" type="text/css">
+    <title>Project Pensieve</title>
 </head>
 <body>
-    <div class="info">
-        <input id="ctnt" name="ctnt" type="text" placeholder="Enter the message">
-        
-        <button class="send" onclick="localfnPost()">send</button>   
-        <button class="get" onclick="localfnGet()">get</button>      
+    <div class="wrap">
+        <div class="index_wrap">
+            <div class="logo_container">
+
+            </div>
+            <div class="login_container">
+                <div class="login_info">
+
+                </div>
+                <div class="login_control">
+                    <button class="login">login</button>
+                    <button class="sign_up">sign up</button>
+                    <p class="find_user_info">ID/PW 찾기</p>
+                </div>
+            </div>
+        </div>
     </div>
-        
-        <div class="result"></div>
-    
 </body>
-<script type="text/javascript" src="setting/postTest.js"></script>
-<script type="text/javascript" src="setting/getTest.js"></script>    
-<script>
-    var localfnPost = fnPost;
-    var localfnGet = fnGet;
-    console.log("localfnPost : " +localfnPost)
-    console.log("localfnGet : " +localfnGet)
-</script>
 </html>
